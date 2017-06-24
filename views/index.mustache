@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head>
+<link rel='stylesheet' href='../assets/styles/main.css'/>
+</head>
+<body> 
+    <!--  {"id":1,"username":"hjuza0","name":"Hamlen Juza","avatar":"https://robohash.org/blanditiisexercitationemquaerat.png?size=150x150&set=set1","email":"hjuza0@blogger.com","university":"Pomor State University","job":"Engineer IV","company":"Stark, Feil and Bode","skills":["DMVPN","HDX","Rhino 3D"],"phone":"7-(397)813-7803","address":{"street_num":"78226","street_name":"Ryan","city":"Kamennogorsk","state_or_province":null,"postal_code":"188950","country":"Russia"}},-->
+<div class='robots'>
+    {{#users}}
+    <div class='robot'>
+        <img class='selfie' src={{avatar}}>
+        <div>
+        <a href="/robots/{{id}}" class='name'>{{name}}</a>
+        </div>
+        <div class='employment'>
+             {{#job}}{{job}}
+            {{company}}
+            {{/job}}
+        </div>
+        <div class'unemployment'>
+            {{^job}}
+                <div class="available">Available for hire</div>
+             {{/job}}   
+        </div>
+    </div>
+    {{/users}}
+</div>
+</body>
+</html>
+
+

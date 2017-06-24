@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href='../assets/styles/main.css' />
+</head>
+
+<body>
+   
+    <div class='employee'>
+      
+        <div class="top">
+            <div class="photo">
+                <img src="{{avatar}}" class="headshot">
+            </div>
+            <div class="aboutMe">
+                
+                <div>
+                    <div class="names">{{name}}</div>
+                </div>
+                <div class="current">
+                    {{#job}} {{job}} | {{company}} {{/job}}
+                </div>
+                {{^job}}
+                <div class="available looking">Available for Hire</div>
+                {{/job}}
+                <div class="current">
+                    {{email}} | {{phone}}
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div>
+            <div class="knowledge">{{#university}}Education: {{university}} {{/university}}</div>
+            <div class="noKnowledge">{{^university}}{{/university}}</div>
+            </div>
+            <div>
+            <div class="hobbies">Skills:  {{skills}}</div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+
+</html>
