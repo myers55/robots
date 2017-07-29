@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>  
+    <head>
+<link rel='stylesheet' href='../assets/styles/main.css'/>
+
+    </head>
+    <body>
+        <h1>hire</h1>
+         <div class='robots'>
+        {{#users}}{{^job}}
+        <div class='robot'>
+            <img class='selfie' src={{avatar}}>
+            <div>
+                <a href="/robots/{{id}}" class='name'>{{name}}</a>
+            </div>
+            <div class="available">Available for hire</div>
+            <div>{{skills}}</div>
+
+        </div>
+        {{/job}}{{/users}}
+    </div>
+    </body>
+</html>

@@ -2,6 +2,12 @@ const express = require('express');
 const mustacheExpress = require('mustache-express');
 const application = express();
 const data = require('./data.js');
+const router = express.Router();
+
+const robots = require('./controllers/robots-controller');
+const robotSingle = require('./controllers/robot-controller');
+const robotWorking = require('./controllers/employed-controller');
+const robotHire = require('./controllers/forHire-controller');
 
 application.engine('mustache', mustacheExpress());
 
@@ -12,16 +18,12 @@ application.set('view engine', 'mustache');
  
 application.use('/assets', express.static('./assets'));
 
-application.get('/robots/:userId', (request, response) => {
-    var userId = request.params.userId;
-    var robot = data.users.find(user => { return user.id === parseInt(userId)})
-    response.render('robots', robot );
-    console.log('get is working');
-});
+application.use(robotSingle);
+application.use(robotWorking);
+application.use(robotHire);
+application.use(robots);
 
-application.get('/', function(request, response){
-    response.render('index', data);
-});
+
 
 application.listen(3000, 'localhost');
-console.log('hello')
+console.log('hello');
