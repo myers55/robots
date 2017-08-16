@@ -1,12 +1,16 @@
 <!DOCTYPE>
-<html>  
-    <head>
-<link rel='stylesheet' href='../assets/styles/main.css'/>
+<html>
 
-    </head>
-    <body>
-        <h1>hire</h1>
-         <div class='robots'>
+<head>
+    <link rel='stylesheet' href='../assets/styles/main.css' />
+
+</head>
+
+<body>
+    <a href="/robots/unemployed">For Hire</a>
+    <a href="/robots/working">Employed</a>
+    <h1>hire</h1>
+    <div class='robots'>
         {{#users}}{{^job}}
         <div class='robot'>
             <img class='selfie' src={{avatar}}>
@@ -19,5 +23,6 @@
         </div>
         {{/job}}{{/users}}
     </div>
-    </body>
+</body>
+
 </html>

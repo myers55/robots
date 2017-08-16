@@ -5,15 +5,17 @@
 </head>
 
 <body>
-   
+    <a href="/robots/unemployed">For Hire</a>
+    <a href="/robots/working">Employed</a>
+
     <div class='employee'>
-      
+
         <div class="top">
             <div class="photo">
                 <img src="{{avatar}}" class="headshot">
             </div>
             <div class="aboutMe">
-                
+
                 <div>
                     <div class="names">{{name}}</div>
                 </div>
@@ -30,14 +32,14 @@
         </div>
         <div class="bottom">
             <div>
-            <div class="knowledge">{{#university}}Education: {{university}} {{/university}}</div>
-            <div class="noKnowledge">{{^university}}{{/university}}</div>
+                <div class="knowledge">{{#university}}Education: {{university}} {{/university}}</div>
+                <div class="noKnowledge">{{^university}}{{/university}}</div>
             </div>
             <div>
-            <div class="hobbies">Skills:  {{skills}}</div>
+                <div class="hobbies">Skills: {{skills}}</div>
             </div>
         </div>
-       
+
     </div>
 </body>
 

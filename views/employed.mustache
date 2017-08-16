@@ -2,11 +2,13 @@
 <html>
 
 <head>
-<link rel='stylesheet' href='../assets/styles/main.css'/>
+    <link rel='stylesheet' href='../assets/styles/main.css' />
 
 </head>
 
 <body>
+    <a href="/robots/unemployed">For Hire</a>
+    <a href="/robots/working">Employed</a>
     <h1>employed</h1>
     <div class='robots'>
         {{#users}}{{#job}}
@@ -16,7 +18,7 @@
                 <a href="/robots/{{id}}" class='name'>{{name}}</a>
             </div>
             <div class='employment'>
-                {{job}} {{company}} 
+                {{job}} {{company}}
             </div>
         </div>
         {{/job}}{{/users}}
